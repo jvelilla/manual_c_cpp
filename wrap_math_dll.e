@@ -12,7 +12,7 @@ class
 
 feature -- Wrapping DLL
 
-	fibonacci_initialization (a, b: DOUBLE)
+	fibonacci_initialization (a, b: INTEGER_32)
 			-- Encapsulation of a dll function with the `_stdcall' call mechanism.
 			-- Initialize a Fibonacci relation sequence
 			-- such that F(0) = a, F(1) = b.
@@ -24,14 +24,14 @@ feature -- Wrapping DLL
 		end
 
 
-	fibonacci_initialization_1 (a, b: DOUBLE)
+	fibonacci_initialization_1 (a, b: INTEGER)
 			-- Encapsulation of a dll function with the `_stdcall' call mechanism.
 			-- Initialize a Fibonacci relation sequence
 			-- such that F(0) = a, F(1) = b.
 			-- This function must be called before any other function.
 
 		external
-			"dll MathLibrary.dll signature (EIF_DOUBLE, EIF_DOUBLE) "
+			"dll MathLibrary.dll signature (EIF_INTEGER_32, EIF_INTEGER_32) "
 		alias
 			"fibonacci_init"
 		end
