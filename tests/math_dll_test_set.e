@@ -29,6 +29,15 @@ feature -- Test routines
 			l_item.fibonacci_initialization (1, 1)
 		end
 
+	math_dll_fib_test1
+			-- `math_dll_fib_test' of DLL
+		local
+			l_item: WRAP_MATH_DLL
+		do
+			create l_item
+			l_item.fibonacci_initialization_1 (1, 1)
+		end
+
 end
 
 
